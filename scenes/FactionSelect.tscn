@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://oul0cssfcquy"]
+
+[ext_resource type="Script" uid="uid://cd3hrs7lveb8m" path="res://scripts/FactionSelect.gd" id="1_lpl5k"]
+
+[node name="FactionSelect" type="Control" unique_id=1806317588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lpl5k")
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=330662795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Layout" unique_id=955304305]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "ВЫБЕРИТЕ СВОЙ ПУТЬ"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Layout" unique_id=842547839]
+layout_mode = 2
+
+[node name="BtnMedic" type="Button" parent="Layout" unique_id=1297409078]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "👨‍⚕️ МЕДИК\\nБонус: +50% к лечению. Напарники-Ученые ищут редкие артефакты."
+
+[node name="BtnMilitary" type="Button" parent="Layout" unique_id=1725548413]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🪖 ВОЕННЫЙ\\nБонус: +25% к урону, +20% к броне. Напарники-Спецназ экономят патроны."
+
+[node name="BtnMarauder" type="Button" parent="Layout" unique_id=10288111]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "🥷 МАРОДЕР\\nБонус: +30% к заработку Знаков. Напарники-Бандиты служат живым щитом."

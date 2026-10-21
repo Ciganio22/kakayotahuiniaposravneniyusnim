@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bxjgo0wjy15wk"]
+
+[ext_resource type="Script" uid="uid://cn45jwjcqrqng" path="res://scripts/BaseHub.gd" id="1_bcw71"]
+
+[node name="BaseHub" type="Control" unique_id=1676846814]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcw71")
+
+[node name="BaseLayout" type="VBoxContainer" parent="." unique_id=1272123814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WalletLabel" type="Label" parent="BaseLayout" unique_id=150843931]
+layout_mode = 2
+text = "Баланс: 0 Зн. | 0 DP"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BaseLayout" unique_id=1201162429]
+layout_mode = 2
+
+[node name="BtnOpenSkills" type="Button" parent="BaseLayout" unique_id=17339990]
+layout_mode = 2
+text = "Открыть Созвездие Навыков"
+
+[node name="TechTitle" type="Label" parent="BaseLayout" unique_id=1482572581]
+layout_mode = 2
+text = "--- ТЕХНИК КОРДОНА ---"
+horizontal_alignment = 1
+
+[node name="BtnRepairWeapon" type="Button" parent="BaseLayout" unique_id=1865938725]
+layout_mode = 2
+text = "Починить оружие"
+
+[node name="BtnRepairArmor" type="Button" parent="BaseLayout" unique_id=251713437]
+layout_mode = 2
+text = "Починить броню"
+
+[node name="HSeparator2" type="HSeparator" parent="BaseLayout" unique_id=1345984600]
+layout_mode = 2
+
+[node name="RouletteTitle" type="Label" parent="BaseLayout" unique_id=2078486203]
+layout_mode = 2
+text = "--- КОЛЕСО УДАЧИ ЗОНЫ ---"
+horizontal_alignment = 1
+
+[node name="BtnSpinRoulette" type="Button" parent="BaseLayout" unique_id=1041387794]
+layout_mode = 2
+text = "Крутить ежедневную рулетку (Бесплатно)"
+
+[node name="RouletteResultLabel" type="Label" parent="BaseLayout" unique_id=1438284217]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="BaseLayout" unique_id=1656354864]
+layout_mode = 2
+text = "--- РЫНОК ОТВЕРЖЕННЫХ (АУКЦИОН) ---"
+horizontal_alignment = 1
+
+[node name="MarketScroll" type="ScrollContainer" parent="BaseLayout" unique_id=922984069]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="MarketContainer" type="VBoxContainer" parent="BaseLayout/MarketScroll" unique_id=791615344]
+layout_mode = 2

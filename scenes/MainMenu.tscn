@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ba5r0hnf3n6s8"]
+
+[ext_resource type="Script" uid="uid://bpwfmjxxun3q1" path="res://scripts/MainMenu.gd" id="1_yqorp"]
+
+[node name="MainMenu" type="Control" unique_id=664821556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqorp")
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1683860909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentArea" type="Control" parent="MainLayout" unique_id=1528102175]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BottomTabs" type="HBoxContainer" parent="MainLayout" unique_id=1749793956]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TabBase" type="Button" parent="MainLayout/BottomTabs" unique_id=342868449]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Убежище"
+
+[node name="TabInventory" type="Button" parent="MainLayout/BottomTabs" unique_id=1472137955]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Инвентарь"
+
+[node name="TabRaid" type="Button" parent="MainLayout/BottomTabs" unique_id=1704802322]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "КАРТА"
+
+[connection signal="pressed" from="MainLayout/BottomTabs/TabBase" to="." method="_on_tab_base_pressed"]
+[connection signal="pressed" from="MainLayout/BottomTabs/TabInventory" to="." method="_on_tab_inventory_pressed"]
+[connection signal="pressed" from="MainLayout/BottomTabs/TabRaid" to="." method="_on_tab_raid_pressed"]

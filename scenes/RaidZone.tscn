@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cmvj7x07enl74"]
+
+[ext_resource type="Script" uid="uid://16lmven4nsve" path="res://scripts/RaidZone.gd" id="1_bnsm3"]
+
+[node name="RaidZone" type="Control" unique_id=1036686990]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bnsm3")
+
+[node name="BattleLayout" type="VBoxContainer" parent="." unique_id=663918948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemyPanel" type="PanelContainer" parent="BattleLayout" unique_id=713257968]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BattleLayout/EnemyPanel" unique_id=2051575670]
+layout_mode = 2
+
+[node name="EnemyHPBar" type="ProgressBar" parent="BattleLayout/EnemyPanel/VBoxContainer" unique_id=1211392019]
+layout_mode = 2
+value = 100.0
+
+[node name="FXArea" type="Control" parent="BattleLayout" unique_id=1782703405]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerPanel" type="PanelContainer" parent="BattleLayout" unique_id=995165672]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BattleLayout/PlayerPanel" unique_id=339853072]
+layout_mode = 2
+
+[node name="WeaponInfoLabel" type="Label" parent="BattleLayout/PlayerPanel/VBoxContainer" unique_id=1903585708]
+layout_mode = 2
+
+[node name="AttackProgressBar" type="ProgressBar" parent="BattleLayout/PlayerPanel/VBoxContainer" unique_id=943872777]
+layout_mode = 2
+
+[node name="PlayerHPBar" type="ProgressBar" parent="BattleLayout/PlayerPanel/VBoxContainer" unique_id=915765685]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+value = 100.0
+
+[node name="PlayerArmorBar" type="ProgressBar" parent="BattleLayout/PlayerPanel/VBoxContainer" unique_id=1817017967]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.47274223, 2.4106188, 1)
+value = 100.0
+
+[node name="ButtonEscape" type="Button" parent="BattleLayout/PlayerPanel/VBoxContainer" unique_id=378424603]
+layout_mode = 2
+text = "Отступить в Убежище"
+
+[connection signal="pressed" from="BattleLayout/PlayerPanel/VBoxContainer/ButtonEscape" to="." method="_on_button_escape_pressed"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bsefmf4faxa5f"]
+
+[ext_resource type="Script" uid="uid://wn1rwyn404ig" path="res://scripts/WorldMap.gd" id="1_ej7nn"]
+
+[node name="WorldMap" type="Control" unique_id=19941110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ej7nn")
+
+[node name="MapLayout" type="VBoxContainer" parent="." unique_id=1582858358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="MapLayout" unique_id=1048533250]
+layout_mode = 2
+text = "--- КАРТА ПУСТОШЕЙ ---"
+horizontal_alignment = 1
+
+[node name="MapScroll" type="ScrollContainer" parent="MapLayout" unique_id=53980084]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RegionsContainer" type="VBoxContainer" parent="MapLayout/MapScroll" unique_id=1121523171]
+layout_mode = 2

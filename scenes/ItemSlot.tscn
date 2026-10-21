@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c00vyebkhmfsi"]
+
+[ext_resource type="Script" uid="uid://bcq0w66nss6j2" path="res://scripts/ItemSlot.gd" id="1_v13n8"]
+
+[node name="ItemSlot" type="TextureButton" unique_id=944658513]
+custom_minimum_size = Vector2(80, 80)
+script = ExtResource("1_v13n8")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=840985244]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 3
+
+[node name="CountLabel" type="Label" parent="." unique_id=1633148699]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0

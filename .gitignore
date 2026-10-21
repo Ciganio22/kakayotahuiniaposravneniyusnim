@@ -1,0 +1,10 @@
+# Godot-specific files
+.godot/
+
+# Mono-specific files
+.mono/
+data_*/
+mono_crash_release_trigger
+
+# System files
+*.tmp

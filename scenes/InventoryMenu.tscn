@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b32m723syu5jh"]
+
+[ext_resource type="Script" uid="uid://51g636tc1wc8" path="res://scripts/InventoryMenu.gd" id="1_i4f8q"]
+[ext_resource type="PackedScene" uid="uid://c00vyebkhmfsi" path="res://scenes/ItemSlot.tscn" id="2_p4cik"]
+
+[node name="InventoryMenu" type="Control" unique_id=2017804855]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i4f8q")
+
+[node name="MainSplitter" type="HBoxContainer" parent="." unique_id=1367849468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterPanel" type="VBoxContainer" parent="MainSplitter" unique_id=1225962883]
+layout_mode = 2
+
+[node name="EquipmentGrid" type="GridContainer" parent="MainSplitter/CharacterPanel" unique_id=176006208]
+layout_mode = 2
+
+[node name="WeaponSlot" parent="MainSplitter/CharacterPanel/EquipmentGrid" unique_id=944658513 instance=ExtResource("2_p4cik")]
+layout_mode = 2
+
+[node name="ArmorSlot" parent="MainSplitter/CharacterPanel/EquipmentGrid" unique_id=475254762 instance=ExtResource("2_p4cik")]
+layout_mode = 2
+
+[node name="HelmetSlot" parent="MainSplitter/CharacterPanel/EquipmentGrid" unique_id=937754269 instance=ExtResource("2_p4cik")]
+layout_mode = 2
+
+[node name="InventoryScroll" type="ScrollContainer" parent="MainSplitter" unique_id=1694302634]
+layout_mode = 2
+
+[node name="ItemGrid" type="GridContainer" parent="MainSplitter/InventoryScroll" unique_id=1870314695]
+layout_mode = 2
+columns = 4
